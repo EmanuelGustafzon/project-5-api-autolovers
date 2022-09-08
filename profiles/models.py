@@ -5,7 +5,6 @@ from django.contrib.auth.models import User
 
 class Profile(models.Model):
 
-
     owner = models.OneToOneField(User, on_delete=models.CASCADE)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
@@ -23,7 +22,7 @@ class Profile(models.Model):
         ('a_lot_of_experience', 'A lot of experience'),
         ('professional_expert', 'Professional expert'),
     ]
-    experience = models.CharField(
+    experience_with_cars = models.CharField(
         max_length=30,
         choices=car_experience_level,
         default='none'
