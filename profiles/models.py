@@ -12,15 +12,15 @@ class Profile(models.Model):
     description = models.TextField(blank=True)
     location = models.TextField(blank=True)
     favorite_car_brand = models.TextField(blank=True)
-    profileimage = models.ImageField(
+    image = models.ImageField(
         upload_to='images/', default='../default_profile_c4xbsi'
     )
     car_experience_level = [
-        ('no_experience', 'No experience'),
-        ('some_experience', 'Some experience'),
+        ('no experience', 'No experience'),
+        ('some experience', 'Some experience'),
         ('experienced', 'Experienced'),
-        ('a_lot_of_experience', 'A lot of experience'),
-        ('professional_expert', 'Professional expert'),
+        ('a lot of experience', 'A lot of experience'),
+        ('professional expert', 'Professional expert'),
     ]
     experience_with_cars = models.CharField(
         max_length=30,
