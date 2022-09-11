@@ -6,6 +6,7 @@ from .models import Profile
 from .serializers import ProfileSerializer
 
 
+
 class ProfileList(APIView):
     """
     List all profiles
@@ -16,8 +17,10 @@ class ProfileList(APIView):
         serializer = ProfileSerializer(profiles, many=True)
         return Response(serializer.data)
 
+
 class ProfileDetail(APIView):
     serializer_class = ProfileSerializer
+
     def get_object(self, pk):
         try:
             profile = Profile.objects.get(pk=pk)
