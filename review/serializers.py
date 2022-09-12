@@ -2,7 +2,7 @@ from rest_framework import serializers
 from .models import Review
 
 
-class ProfileSerializer(serializers.ModelSerializer):
+class ReviewSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
     profile_id = serializers.ReadOnlyField(source='owner.profile.id')
@@ -30,7 +30,7 @@ class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = Review
         fields = [
-            'id', 'profile_id', 'owner', 'is_owner', 'profile_image' 
+            'id', 'profile_id', 'owner', 'is_owner', 'profile_image',
             'created_on', 'updated_on', 'brand', 'image',
             'model', 'model_year', 'pros', 'cons',
         ]
