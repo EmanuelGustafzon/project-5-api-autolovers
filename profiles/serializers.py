@@ -14,6 +14,6 @@ class ProfileSerializer(serializers.ModelSerializer):
         model = Profile
         fields = [
             'id', 'owner', 'is_owner', 'created_on', 'updated_on', 'username',
-            'description', 'profileimage', 'favorite_car_brand',
+            'description', 'image', 'favorite_car_brand',
             'experience_with_cars',
         ]
