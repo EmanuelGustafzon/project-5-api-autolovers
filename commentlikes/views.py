@@ -10,7 +10,7 @@ class CommentLikeList(generics.ListCreateAPIView):
     List likes or create a like if logged in.
     """
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-    serializer_class = CommentLikeSerializer()
+    serializer_class = CommentLikeSerializer
     queryset = Commentlikes.objects.all()
  
     def perform_create(self, serializer):
