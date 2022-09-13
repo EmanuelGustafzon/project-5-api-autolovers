@@ -20,6 +20,7 @@ class ReviewList(generics.ListCreateAPIView):
     search_fields = [
         'owner__username',
         'brand',
+        'model',
     ]
     ordering_fields = [
         'likes_count',
