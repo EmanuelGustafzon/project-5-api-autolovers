@@ -19,6 +19,7 @@ class CommentSerializer(serializers.ModelSerializer):
             'created_on', 'updated_on', 'content', 'review',
         ]
 
+
 class CommentDetailSerializer(CommentSerializer):
     """
     Serializer for the Comment model used in Detail view
