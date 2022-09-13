@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from comments.models import Comment
 
+
 class Commentlikes(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     comment = models.ForeignKey(
