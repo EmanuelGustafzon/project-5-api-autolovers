@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 from review.models import Review
-from comments.models import Comment
 
 
 class Reviewlikes(models.Model):
