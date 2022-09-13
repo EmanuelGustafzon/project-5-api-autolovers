@@ -14,7 +14,12 @@ class ReviewList(generics.ListCreateAPIView):
         comments_count=Count('comment', distinct=True)
     ).order_by('-created_on')
     filter_backends = [
-        filters.OrderingFilter
+        filters.OrderingFilter,
+        filters.SearchFilter,
+    ]
+    search_fields = [
+        'owner__username',
+        'brand',
     ]
     ordering_fields = [
         'likes_count',
