@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-
+    
 
 class Review(models.Model):
     """ Model for reviews of cars """
@@ -13,7 +13,7 @@ class Review(models.Model):
         ('nashville', 'Nashville'), ('rise', 'Rise'),
         ('toaster', 'Toaster'), ('valencia', 'Valencia'),
         ('walden', 'Walden'), ('xpro2', 'X-pro II')
-]
+    ]
 # The different choices for car brand
     brand_choices = [
         (('Alfa Romeo'), ('Alfa Romeo')),
@@ -96,8 +96,7 @@ class Review(models.Model):
         upload_to='images/', blank=True
     )
     image_filter = models.CharField(
-        max_length=32, choices=image_filter_choices, default='normal'
-    )
+        max_length=32, choices=image_filter_choices, default='normal')
     model = models.CharField(max_length=200)
     model_year = models.IntegerField()
     pros = models.TextField()
