@@ -77,7 +77,7 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
         rf"{extracted_url}(eu|us)\d+\w\.gitpod\.io$",
     ]
 CORS_ALLOW_CREDENTIALS = True
-
+CORS_ORIGIN_ALLOW_ALL = True
 # Application definition
 
 INSTALLED_APPS = [
