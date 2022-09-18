@@ -33,7 +33,7 @@ class MarketSerializer(serializers.ModelSerializer):
         model = Market
         fields = [
             'id', 'profile_id', 'owner', 'is_owner', 'profile_image',
-            'created_on', 'updated_on', 'image',
+            'created_on', 'updated_on', 'image', 'country', 'city',
             'brand', 'model', 'model_year', 'facilities', 'problems',
-            'description', 'phone', 'email',
+            'description', 'price', 'phone', 'email',
         ]

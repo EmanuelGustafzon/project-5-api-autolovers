@@ -23,7 +23,9 @@ class MarketList(generics.ListCreateAPIView):
         'owner__username',
         'brand',
         'model',
-        'model_year'
+        'model_year',
+        'country',
+        'city',
     ]
  
     def perform_create(self, serializer):

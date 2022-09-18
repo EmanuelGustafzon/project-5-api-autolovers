@@ -87,6 +87,8 @@ class Market(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
+    country = models.CharField(max_length=200, default='none')
+    city = models.CharField(max_length=200, default='none')
     brand = models.CharField(
         max_length=30,
         choices=brand_choices,
@@ -102,8 +104,9 @@ class Market(models.Model):
     facilities = models.TextField(blank=True)
     problems = models.TextField(blank=True)
     description = models.TextField()
+    price = models.IntegerField(default=0)
     phone = models.IntegerField()
-    email = models.EmailField()
+    email = models.EmailField(blank=True)
  
  
     class Meta:
