@@ -107,8 +107,7 @@ class Market(models.Model):
     price = models.IntegerField(default=0)
     phone = models.IntegerField()
     email = models.EmailField(blank=True)
- 
- 
+
     class Meta:
         ordering = ['-created_on']
  
