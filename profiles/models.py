@@ -15,18 +15,7 @@ class Profile(models.Model):
     image = models.ImageField(
         upload_to='images/', default='../default_profile_c4xbsi'
     )
-    car_experience_level = [
-        ('no experience', 'No experience'),
-        ('some experience', 'Some experience'),
-        ('experienced', 'Experienced'),
-        ('a lot of experience', 'A lot of experience'),
-        ('professional expert', 'Professional expert'),
-    ]
-    experience_with_cars = models.CharField(
-        max_length=30,
-        choices=car_experience_level,
-        default='none'
-    )
+
 
     class Meta:
         ordering = ['-created_on']
