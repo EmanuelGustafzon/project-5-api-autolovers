@@ -9,7 +9,7 @@ from .settings import (
 @api_view()
 def root_route(request):
     return Response({
-        "message": "Welcome to Autolovers!"
+        "message": "Welcome to my drf API!"
     })
 
 
@@ -35,4 +35,4 @@ def logout_route(request):
         samesite=JWT_AUTH_SAMESITE,
         secure=JWT_AUTH_SECURE,
     )
-    return Response
+    return response
