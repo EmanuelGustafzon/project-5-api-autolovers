@@ -6,7 +6,7 @@ Autolovers is the backend, the api for the webiste Autolovers Media. As you can 
 ## The deployed frontend page you will find here: https://autoloversmedia.herokuapp.com/
 
 ## Agile methodology
-Find the user stories and the project here: 
+Find the user stories and the project here: https://github.com/users/EmanuelGustafzon/projects/5
 
 ## Database
 - The databse is structures as following
